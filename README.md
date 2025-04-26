@@ -13,56 +13,80 @@ _Learn how to create professional release notes and maintain effective changelog
 
 </header>
 
-<!--
-  <<< Author notes: Course start >>>
-  Include start button, a note about Actions minutes,
-  and tell the learner why they should take the course.
--->
+# Step 1: Understanding Changelogs
 
-## Welcome
+Changelogs and release notes are essential tools for communicating changes to users of your software. They help users understand what has changed between versions, which is crucial for making upgrade decisions and finding new features.
 
-Clear documentation of changes is crucial for maintaining software projects and communicating updates to users. This course will teach you how to create effective release notes, maintain standardized changelogs, and automate the documentation process.
+## 📝 What is a Changelog?
 
-- **Who is this for**: Developers, project maintainers, and open source contributors.
-- **What you'll learn**: Best practices for release notes, changelog maintenance, and automating documentation.
-- **What you'll build**: A project with professional release notes, standardized changelogs, and automated release documentation.
-- **Prerequisites**: Basic understanding of Git, GitHub workflows, and semantic versioning.
-- **How long**: 30-45 minutes.
+A changelog is a file which contains a curated, chronologically ordered list of notable changes for each version of a project. A well-structured changelog makes it easier for users and contributors to see precisely what changes have been made between each release of the project.
 
-### In this course, you'll learn how to:
+## 📝 The Keep a Changelog Format
 
-1. Create effective release notes for GitHub releases
-2. Maintain a standardized CHANGELOG.md file
-3. Automate changelog generation with GitHub Actions
+Many projects follow the format defined at [keepachangelog.com](https://keepachangelog.com/), which includes these principles:
 
-## Introduction to Release Notes and Changelogs
+- Changelogs are for humans, not machines
+- There should be an entry for every version
+- The same types of changes should be grouped
+- Versions and sections should be linkable
+- The latest version comes first
+- The release date of each version is displayed
 
-Release notes and changelogs are essential tools for communicating changes to your users:
+## 📝 Standard Sections
 
-- **Release Notes**: A detailed description of changes in a specific version
-- **Changelogs**: A chronological record of all changes across versions
-- **Standardization**: Following industry conventions makes your documentation easier to understand
-- **Automation**: Tools can help maintain consistent documentation with minimal effort
+A standard changelog typically groups changes into these categories:
 
-When done well, release notes and changelogs help users:
-- Understand what's changed between versions
-- Decide whether to upgrade
-- Find new features they might want to use
-- Identify when bugs they've encountered have been fixed
+- **Added** for new features
+- **Changed** for changes in existing functionality
+- **Deprecated** for soon-to-be removed features
+- **Removed** for now removed features
+- **Fixed** for any bug fixes
+- **Security** for vulnerability fixes
 
-This course will teach you how to create and maintain these important documents for your GitHub projects.
+## :keyboard: Task: Get Started
 
----
+Let's begin by setting up our learning environment:
 
-### 🚀 How to start this course
+1. Navigate to the Issues tab in your repository
+2. Create a new issue titled "Starting my changelog journey"
 
-[![start-course](https://user-images.githubusercontent.com/1221423/235727646-4a590299-ffe5-480d-8cd5-8194ea184546.svg)](https://github.com/new?template_owner=bryceshen1&template_name=Release-Notes-and-Changelogs&owner=%40me&name=Release-Notes-and-Changelogs&description=Learning+Release+Notes+and+Changelogs&visibility=public)
+## :keyboard: Task: Create Your First CHANGELOG.md
 
-1. Right-click **Start course** and open the link in a new tab.
-2. In the new tab, follow the prompts to create a new repository.
-   - For owner, choose your personal account or an organization to host the repository.
-   - We recommend creating a public repository—private repositories will [use Actions minutes](https://docs.github.com/en/billing/managing-billing-for-github-actions/about-billing-for-github-actions).
-3. After your new repository is created, wait about 20 seconds, then refresh the page. Follow the step-by-step instructions in the new repository's README.
+After crearting your issue:
+
+1. Create a new file named `CHANGELOG.md` in the root of your repository
+2. Add the following content to your file:
+
+```markdown
+# Changelog
+
+All notable changes to this project will be documented in this file.
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
+
+## [Unreleased]
+
+### Added
+- Initial project setup
+- Basic functionality
+
+## [0.1.0] - YYYY-MM-DD
+### Added
+- First release
+- Feature A
+- Feature B
+
+[Unreleased]: https://github.com/username/repository/compare/v0.1.0...HEAD
+[0.1.0]: https://github.com/username/repository/releases/tag/v0.1.0
+```
+
+3. Replace `YYYY-MM-DD` with today's date
+4. Replace `username/repository` with your actual GitHub username and repository name
+5. Commit this file to your repository
+6. Go to the issue you created earlier and comment "changelog-created"
+
+Once you've completed these steps, I'll guide you to the next part of the course.
 
 <footer>
 
